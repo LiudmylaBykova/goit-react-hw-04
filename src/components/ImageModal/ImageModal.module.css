@@ -1,7 +1,7 @@
 .Overlay {
     position: fixed;
     inset: 0px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 100;
 }
 
@@ -21,22 +21,20 @@
     transition: all 0.2s ease-in-out;
 }
 
+.modalContainer {
+    background-color: hsla(210, 3%, 14%, 0.7);
+}
+
 .image {
     max-width: 100%;
     max-height: 80vh;
     margin: 0 auto;
 }
 
-.imageDescription {
-    font-size: 16px;
-    font-weight: 600;
-    color: antiquewhite;
-}
-
 .imageInfo {
     display: flex;
     justify-content: space-between;
-    padding: 0 5px;
+    padding: 0 5px 5px;
 }
 
 .imageDescr {
