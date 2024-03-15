@@ -36,5 +36,14 @@
 .imageInfo {
     display: flex;
     justify-content: space-between;
+    padding: 0 5px;
+}
+
+.imageDescr {
     color: antiquewhite;
+    margin: 0;
+}
+
+.imageSpan {
+    font-weight: 600;
 }

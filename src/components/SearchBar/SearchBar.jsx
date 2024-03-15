@@ -1,5 +1,4 @@
 import { Formik, Form, Field } from "formik";
-
 import toast, { Toaster } from "react-hot-toast";
 import { BiSearchAlt } from "react-icons/bi";
 import css from "./SearchBar.module.css";

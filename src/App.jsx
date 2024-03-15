@@ -2,10 +2,10 @@ import "./App.css";
 import toast, { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 
+import requestImagesByQuery from "./services/api";
 import ImageGallery from "./components/ImageGallery/ImageGallery";
 import Loader from "./components/Loader/Loader";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
-import requestImagesByQuery from "./services/api";
 import SearchBar from "./components/SearchBar/SearchBar";
 import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
 import ImageModal from "./components/ImageModal/ImageModal";
@@ -42,7 +42,7 @@ function App() {
             position: "top-right",
           });
         } else {
-          setImages((prevImages) => prevImages.concat(data.results));
+          setImages((prevImages) => [...prevImages, ...data.results]);
           setLoadMoreBtn(data.total_pages && data.total_pages !== page);
         }
       } catch (error) {
@@ -80,7 +80,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <>
       <SearchBar onSearch={handleSearch} />
       <Toaster />
       {error && <ErrorMessage />}
@@ -94,7 +94,7 @@ function App() {
         modalIsOpen={modalIsOpen}
         {...modalData}
       />
-    </div>
+    </>
   );
 }
 

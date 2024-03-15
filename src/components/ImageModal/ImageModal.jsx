@@ -23,14 +23,14 @@ const ImageModal = ({
         <div className={css.imageContainer}>
           <img className={css.image} src={imageSrc} alt={imageAltDescription} />
         </div>
-        <ul className={css.imageInfo}>
-          <li>
-            <p>Author: {imageAutor}</p>
-          </li>
-          <li>
-            <p>Likes: {imageLikes}</p>
-          </li>
-        </ul>
+        <div className={css.imageInfo}>
+          <p className={css.imageDescr}>
+            Author: <span className={css.imageSpan}>{imageAutor}</span>
+          </p>
+          <p className={css.imageDescr}>
+            Likes: <span className={css.imageSpan}>{imageLikes}</span>
+          </p>
+        </div>
       </div>
     </Modal>
   );
